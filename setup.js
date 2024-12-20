@@ -59,11 +59,12 @@ const loginUser = async (email, password) => {
 const registerUser = async (email, password) => {
     const maxRetries = 5;
     let attempt = 0;
+    const name = email.split('@')[0];
 
     while (attempt < maxRetries) {
         try {
-            const inviteCode = 'olc853b12a';
-            const registrationPayload = { name: email, username: email, password, inviteCode };
+            const inviteCode = 'ol41fe134b';
+            const registrationPayload = { name, username: email, password, inviteCode };
 
             const registerResponse = await fetch('https://api.openloop.so/users/register', {
                 method: 'POST',
@@ -99,6 +100,7 @@ const registerUser = async (email, password) => {
         }
     }
 };
+
 
 const processAccounts = async () => {
     const filePath = './account.txt'; // Path to the accounts file
