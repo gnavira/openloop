@@ -155,9 +155,9 @@ const doMissions = async (missionId, token) => {
 };
 
 const main = () => {
-    logger('Starting bandwidth sharing each 3 minute...');
+    logger('Starting bandwidth sharing each 4 minute...');
     shareBandwidthForAllTokens();
 
-    intervalId = setInterval(shareBandwidthForAllTokens, 180 * 1000);
+    intervalId = setInterval(shareBandwidthForAllTokens, 240 * 1000);
 };
 main();
