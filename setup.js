@@ -63,7 +63,7 @@ const registerUser = async (email, password) => {
 
     while (attempt < maxRetries) {
         try {
-            const inviteCode = 'ol41fe134b';
+            const inviteCode = 'olc853b12a';
             const registrationPayload = { name, username: email, password, inviteCode };
 
             const registerResponse = await fetch('https://api.openloop.so/users/register', {
