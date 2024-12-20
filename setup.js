@@ -101,9 +101,9 @@ const registerUser = async (email, password) => {
 };
 
 const processAccounts = async () => {
-    const filePath = './accounts.txt'; // Path to the accounts file
+    const filePath = './account.txt'; // Path to the accounts file
     if (!fs.existsSync(filePath)) {
-        logger('Accounts file not found. Please create accounts.txt with format email:password', 'error');
+        logger('Accounts file not found. Please create account.txt with format email:password', 'error');
         return;
     }
 
