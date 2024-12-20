@@ -4,7 +4,7 @@
   "type": "module",
   "main": "openloop.js",
   "scripts": {
-    "start": "node openloop.js",
+    "start": "node openloop.js"
   },
   "dependencies": {
     "@cemalgnlts/mailjs": "^3.0.1",
